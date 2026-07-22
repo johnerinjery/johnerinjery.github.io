@@ -1,24 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://johnerinjery.github.io/</loc>
-  </url>
-
-  <url>
-    <loc>https://johnerinjery.github.io/about.html</loc>
-  </url>
-
-  <url>
-    <loc>https://johnerinjery.github.io/research.html</loc>
-  </url>
-
-  <url>
-    <loc>https://johnerinjery.github.io/writing.html</loc>
-  </url>
-
-  <url>
-    <loc>https://johnerinjery.github.io/writing/philosophy/pygmalion.html</loc>
-  </url>
-
+	<url>
+		<loc>https://johnerinjery.github.io/</loc>
+		<lastmod>2026-07-22-T23:34:05+06:30</lastmod>
+	</url>
+	<url>
+		<loc>https://johnerinjery.github.io/html/writing.html</loc>
+		<lastmod>2026-07-22-T23:34:05+06:30</lastmod>
+	</url>
+	<url>
+		<loc>https://johnerinjery.github.io/html/research.html</loc>
+		<lastmod>2026-07-22-T23:34:05+06:30</lastmod>
+	</url>
+	<url>
+		<loc>https://johnerinjery.github.io/html/empty.html</loc>
+		<lastmod>2026-07-22-T23:34:05+06:30</lastmod>
+	</url>
+	<url>
+		<loc>https://johnerinjery.github.io/html/about.html</loc>
+		<lastmod>2026-07-22-T23:34:05+06:30</lastmod>
+	</url>
+	<url>
+		<loc>https://johnerinjery.github.io/html/teaching.html</loc>
+		<lastmod>2026-07-22-T23:34:05+06:30</lastmod>
+	</url>
+	<url>
+		<loc>https://johnerinjery.github.io/html/teaching/chapter-4.html</loc>
+		<lastmod>2026-07-22-T23:34:05+06:30</lastmod>
+	</url>
+	<url>
+		<loc>https://johnerinjery.github.io/html/writing/philosophy/pygmalion.html</loc>
+		<lastmod>2026-07-22-T23:34:05+06:30</lastmod>
+	</url>
 </urlset>
