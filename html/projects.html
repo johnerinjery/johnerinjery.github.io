@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <a href="/" class="nav-home" aria-label="Home">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M3 11.5 12 4l9 7.5"></path>
+          <path
+            d="M5.5 10v9.5a1 1 0 0 0 1 1H9.5v-6h5v6H17.5a1 1 0 0 0 1-1V10"
+          ></path>
+        </svg>
+      </a>
+
+      <div data-include="/html/navbar.html"></div>
+    </header>
+
+    <main>
+      <section class="research">
+        <h1>Projects</h1>
+        <p>
+          Computational techniques are widely used in cosmology and
+          astrophysics. Most of my projects so far have been computational in
+          nature, and I have been using mainly Python for my coding work, and
+          standard research tools and resources like
+          <a
+            href="https://www.iap.fr/useriap/sousbie/web/html/indexd41d.html"
+            target="_blank"
+            >DisPerSE</a
+          >,
+          <a
+            href="https://bitbucket.org/gfcstanford/rockstar/src/main/"
+            target="_blank"
+            >ROCKSTAR</a
+          >,
+          <a
+            href="https://www.tng-project.org/data/downloads/TNG50-4-Dark/"
+            target="_blank"
+            >IllustrisTNG</a
+          >
+          data, among others. Most projects attempt to reproduce results from
+          published papers (linked) and then perhaps extend them in some way.
+          Below given are a few of the selected projects. I have not yet been
+          able to make proper reports for these yet, but I will be adding them
+          to this page soon.
+        </p>
+        <h3 id="ml-semproj">
+          <span class="dot">●</span> Machine Learning Optimization of Dynamical
+          State Detector
+        </h3>
+        <span class="project-subheading">Starting January 2027</span>
+        <p>
+          <a href="https://doi.org/10.1063/5.0196382" target="_blank"
+            >Thakur et. al. (2024)</a
+          >
+          introduced a machine-learning approach for detecting dynamical states
+          using recurrence measures derived directly from nonlinear time series.
+          Unlike conventional approaches that often require knowledge of the
+          governing differential equations to calculate quantities such as
+          Lyapunov exponents, their method uses recurrence-based features to
+          train supervised classifiers. <br />My project, supervised by
+          <a
+            href="https://www.iiserpune.ac.in/research/department/physics/people/faculty/regular-faculty/chandrakala-meena/569"
+            target="_blank"
+            >Dr. Chandrakala Meena</a
+          >, focuses on automating and optimising the preprocessing involved in
+          extracting recurrence measures using machine learning, with the aim of
+          streamlining the overall classification workflow. <br />
+          It is a different trajectory from the other cosmology projects
+          described below, and a welcome change of pace from my continuing
+          cosmology projects!
+        </p>
+
+        <h3>
+          <span class="dot">●</span>Classifying Sub-filaments using DisPerSE
+        </h3>
+        <span class="project-subheading"
+          >Completion after my Endsems. Lo, the endless cycle of academic
+          evaluvation!</span
+        >
+        <p>
+          <a
+            href="
+https://doi.org/10.48550/arXiv.2608.25840"
+            target="_blank"
+            >Dhawalikar et. al. (2026)</a
+          >
+          recently introduced a geometric classification scheme to classify
+          sub-filmanets embedded within the cosmic filaments in the hierarchical
+          cosmic web. A novel filament finder named <code>Skeletor</code> was
+          used in this analysis. To better understand the nature of
+          sub-filaments and the classification scheme used, I am attempting to
+          use DisPerSE for the same, fully recognizing <code>Skeletor</code> as
+          the optimal analysis software.
+        </p>
+
+        <h3>
+          <span class="dot">●</span> Quenching in filament proximate mergers
+        </h3>
+        <p>
+          Compare quenching proxies (e.g. D4000 index) of merging pairs as
+          function of <code>d_filament</code>, controlling for stellar mass and
+          cluster proximity. Tests whether the filament environment specifically
+          drives quenching in merger pairs. This is a gap I found in
+          <a
+            href="https://ui.adsabs.harvard.edu/abs/2026A%26A...708L...5D/abstract"
+            target="_blank"
+            >Dulcien et al. (2026).
+          </a>
+        </p>
+        <h3>
+          <span class="dot">●</span> Galaxy morphology as function of filament
+          distance
+        </h3>
+        <span class="project-subheading">For Decemeber 2026</span>
+        <p>
+          Use Galaxy Zoo morphological classifications to test whether the
+          fraction of early-type galaxies increases closer to filaments, after
+          accounting for stellar mass and local density.
+        </p>
+        <div class="spectral-line"></div>
+      </section>
+    </main>
+    <div data-include="/html/footer.html"></div>
+    <script>
+      Promise.all(
+        [...document.querySelectorAll("[data-include]")].map(async (el) => {
+          const response = await fetch(el.dataset.include);
+
+          if (!response.ok) {
+            throw new Error(`Failed to load ${el.dataset.include}`);
+          }
+
+          el.innerHTML = await response.text();
+        }),
+      )
+        .then(() => {
+          const script = document.createElement("script");
+          script.src = "/main.js";
+          document.body.appendChild(script);
+        })
+        .catch(console.error);
+    </script>
+  </body>
+</html>

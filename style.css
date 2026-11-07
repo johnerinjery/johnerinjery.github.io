@@ -40,7 +40,7 @@ body {
 }
 
 a {
-  color: inherit;
+  color: var(--accent);
   text-decoration: none;
 }
 
@@ -374,6 +374,17 @@ a {
 
 .research a {
   color: var(--accent);
+}
+
+.research .project-subheading {
+  font-size: 0.85rem;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--text-muted);
+  opacity: 0.85;
+  margin-top: -0.4rem;
+  margin-bottom: 0.25rem;
+  margin-left: 1.1rem;
 }
 
 /* -------------------- WRITING -------------------- */
